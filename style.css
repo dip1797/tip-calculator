@@ -1,0 +1,158 @@
+/* style.css */
+:root{
+    --back:#EFE1D1;
+    --dark:#331D2C;
+    --light-purple:#3F2E3E;
+    --card-back:#A78295;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 16px;
+    
+}
+
+.card {
+    width: 320px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card h1{
+    color:#331D2C;
+    border: 1px solid #331D2C;
+    padding: 5px;
+}
+
+.input-container {
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+input[type="number"],input[type="range"] {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="range"] {
+    cursor: pointer;
+    
+}
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #331D2C;
+    border: 2px solid #331D2C; /* Add a border for better visibility */
+    width: 20px; /* Adjust the width of the thumb */
+    height: 20px; /* Adjust the height of the thumb */
+}
+
+input[type="number"]:focus,
+input[type="range"]:focus {
+    border-color: #331D2C;
+    outline: none;
+}
+
+.submit {
+    /* background: linear-gradient(to right, red, blue); */
+
+    /* background: conic-gradient(var(--dark), var(--light-purple), var(--card-back)); */
+    background: radial-gradient(circle,var(--light-purple), var(--dark));
+    border-radius: 5px;
+    color:var(--back);
+    border: none;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #4e2b3f;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.display-result {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.display-result h3 {
+    margin-bottom: 8px;
+}
+label{
+    margin-top: 10px;
+    font-size: 25px;
+}
+#total,#perPeople{
+    color:var(--light-purple);
+}
+.error{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #4a4a4a;
+}
+svg path {
+    fill:var(--dark);
+}
+.reset {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--back);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    color: var(--dark);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.reset svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--dark);
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset:hover {
+    background-color: #dcdcdc;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+.b1{
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+
