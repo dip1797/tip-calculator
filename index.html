@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <div class="card">
+        <h1>Tip Calculator</h1>
+        <div class="input-container">
+            <label for="bill">Bill Amount</label>
+            <input id="bill" type="number" placeholder="Enter bill amount">
+            
+            <label for="tip">Tip Percentage <span id="tipPercentageValue">15%</span></label>
+            <input id="tip" type="range" min="0" max="100" oninput="updateTipPercentage(this.value)" value="15">
+            
+            <label for="person">Number of People <span id="numOfPersonValue">5</span></label>
+            <input id="person" type="range" placeholder="Enter number of people" min="0" max="100" value="5" oninput="updateNumOfPerson(this.value)">
+        </div>
+        <div class="b1">
+        <button type="button" class="submit"  onclick="count()">Calculate</button>
+        <button type="button" class="reset" onclick="resetApp()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.06-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z"/></svg></button>
+        </div>
+        <div class="display-result">
+            <h3>Tip Amount: <span id="tipCount"></span></h3>
+            <h3>Total Bill: <span id="total"></span></h3>
+            <h3>Per Person Total: <span id="perPeople"></span></h3>
+            <p id="error" style="color: red;"></p>
+        </div>
+
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
